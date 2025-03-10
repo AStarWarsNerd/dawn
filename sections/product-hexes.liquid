@@ -11,6 +11,11 @@
         flex-direction: column;
         gap: 20px;
     }
+    {{ id }} .product-hexes-container h2 {
+        font-size: 36px;
+        color: {{ section.settings.heading_color }};
+        text-align: center;
+    }
     {{ id }} .product-hex-row {
         display: flex;
         padding: 75px 0px;
@@ -21,7 +26,7 @@
         top: 95px;
         margin-right: -30px;
         margin-left: -30px;
-        background-color: var(--color-light-pink);
+        background-color: {{ section.settings.hex_background_color }};
         clip-path: polygon( 98.764% 45.383%,78.378% 10.078%,78.378% 10.078%,77.842% 9.254%,77.229% 8.501%,76.546% 7.821%,75.801% 7.219%,74.999% 6.699%,74.147% 6.264%,73.253% 5.919%,72.324% 5.668%,71.365% 5.515%,70.385% 5.463%,29.614% 5.463%,29.614% 5.463%,28.634% 5.515%,27.676% 5.668%,26.746% 5.919%,25.852% 6.264%,25.001% 6.699%,24.199% 7.219%,23.453% 7.821%,22.77% 8.501%,22.157% 9.254%,21.621% 10.078%,1.236% 45.383%,1.236% 45.383%,0.791% 46.258%,0.445% 47.166%,0.198% 48.097%,0.049% 49.044%,0% 49.998%,0.049% 50.953%,0.198% 51.9%,0.445% 52.831%,0.791% 53.738%,1.236% 54.614%,21.621% 89.922%,21.621% 89.922%,22.157% 90.746%,22.77% 91.499%,23.453% 92.179%,24.199% 92.781%,25.001% 93.301%,25.852% 93.736%,26.746% 94.081%,27.676% 94.332%,28.634% 94.486%,29.614% 94.538%,70.385% 94.538%,70.385% 94.538%,71.365% 94.486%,72.324% 94.332%,73.253% 94.081%,74.147% 93.736%,74.998% 93.301%,75.801% 92.781%,76.546% 92.179%,77.229% 91.499%,77.842% 90.746%,78.378% 89.922%,98.764% 54.614%,98.764% 54.614%,99.209% 53.738%,99.555% 52.831%,99.802% 51.9%,99.951% 50.953%,100% 49.998%,99.951% 49.044%,99.802% 48.097%,99.555% 47.166%,99.209% 46.258%,98.764% 45.383% );
     }
     {{ id }} .product-hex-outer:first-of-type {
@@ -33,7 +38,7 @@
         margin-left: -30px;
     }
     {{ id }} .product-hex {
-        background-color: var(--color-medium-blue);
+        background-color: {{ section.settings.background_color }};
         clip-path: polygon( 98.764% 45.383%,78.378% 10.078%,78.378% 10.078%,77.842% 9.254%,77.229% 8.501%,76.546% 7.821%,75.801% 7.219%,74.999% 6.699%,74.147% 6.264%,73.253% 5.919%,72.324% 5.668%,71.365% 5.515%,70.385% 5.463%,29.614% 5.463%,29.614% 5.463%,28.634% 5.515%,27.676% 5.668%,26.746% 5.919%,25.852% 6.264%,25.001% 6.699%,24.199% 7.219%,23.453% 7.821%,22.77% 8.501%,22.157% 9.254%,21.621% 10.078%,1.236% 45.383%,1.236% 45.383%,0.791% 46.258%,0.445% 47.166%,0.198% 48.097%,0.049% 49.044%,0% 49.998%,0.049% 50.953%,0.198% 51.9%,0.445% 52.831%,0.791% 53.738%,1.236% 54.614%,21.621% 89.922%,21.621% 89.922%,22.157% 90.746%,22.77% 91.499%,23.453% 92.179%,24.199% 92.781%,25.001% 93.301%,25.852% 93.736%,26.746% 94.081%,27.676% 94.332%,28.634% 94.486%,29.614% 94.538%,70.385% 94.538%,70.385% 94.538%,71.365% 94.486%,72.324% 94.332%,73.253% 94.081%,74.147% 93.736%,74.998% 93.301%,75.801% 92.781%,76.546% 92.179%,77.229% 91.499%,77.842% 90.746%,78.378% 89.922%,98.764% 54.614%,98.764% 54.614%,99.209% 53.738%,99.555% 52.831%,99.802% 51.9%,99.951% 50.953%,100% 49.998%,99.951% 49.044%,99.802% 48.097%,99.555% 47.166%,99.209% 46.258%,98.764% 45.383% );
         text-align: center;
         display: flex;
@@ -53,17 +58,17 @@
         margin: 0 auto;
     }
     {{ id }} .product-hex h3 {
-        color: var(--color-orange);
+        color: {{ section.settings.hex_title_color }};
     }
     {{ id }} .product-hex-inner {
-        background-color: var(--color-light-pink);
+        background-color: {{ section.settings.hex_background_color }};
         clip-path: polygon( 98.764% 45.383%,78.378% 10.078%,78.378% 10.078%,77.842% 9.254%,77.229% 8.501%,76.546% 7.821%,75.801% 7.219%,74.999% 6.699%,74.147% 6.264%,73.253% 5.919%,72.324% 5.668%,71.365% 5.515%,70.385% 5.463%,29.614% 5.463%,29.614% 5.463%,28.634% 5.515%,27.676% 5.668%,26.746% 5.919%,25.852% 6.264%,25.001% 6.699%,24.199% 7.219%,23.453% 7.821%,22.77% 8.501%,22.157% 9.254%,21.621% 10.078%,1.236% 45.383%,1.236% 45.383%,0.791% 46.258%,0.445% 47.166%,0.198% 48.097%,0.049% 49.044%,0% 49.998%,0.049% 50.953%,0.198% 51.9%,0.445% 52.831%,0.791% 53.738%,1.236% 54.614%,21.621% 89.922%,21.621% 89.922%,22.157% 90.746%,22.77% 91.499%,23.453% 92.179%,24.199% 92.781%,25.001% 93.301%,25.852% 93.736%,26.746% 94.081%,27.676% 94.332%,28.634% 94.486%,29.614% 94.538%,70.385% 94.538%,70.385% 94.538%,71.365% 94.486%,72.324% 94.332%,73.253% 94.081%,74.147% 93.736%,74.998% 93.301%,75.801% 92.781%,76.546% 92.179%,77.229% 91.499%,77.842% 90.746%,78.378% 89.922%,98.764% 54.614%,98.764% 54.614%,99.209% 53.738%,99.555% 52.831%,99.802% 51.9%,99.951% 50.953%,100% 49.998%,99.951% 49.044%,99.802% 48.097%,99.555% 47.166%,99.209% 46.258%,98.764% 45.383% );
         text-align: center;
         display: flex;
         flex-direction: column;
         gap: 10px;
         justify-content: center;
-        color: var(--color-purple);
+        color: {{ section.settings.hex_text_color }};
         width: 96%;
         height: 96%;
         margin: 2% auto;
@@ -81,14 +86,16 @@
     {{ id }} .title-hex .price {
         font-weight: bold;
         font-size: 20px;
+        color: {{ section.settings.hex_text_color }};
     }
-    {{ id }} .title-hex
+    {{ id }} .title-hex .hex-button {
+        background-color: {{ section.settings.hex_button_color }};
+    }
+    {{ id }} .title-hex .hex-button:hover {
+        background-color: {{ section.settings.hex_button_hover_color }};
+    }
 
   {% comment %} @media only screen and (max-width:767px) {
-    {{id}} {
-
-    }
-
   } {% endcomment %}
 </style>
 
@@ -156,21 +163,24 @@
       "content": "Layout settings"
     },
     {
-      "type": "text",
+      "type": "range",
       "id": "padding_top",
-      "label": "Padding Top of the block",
-      "info": "number of pixel"
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 20
     },
     {
-      "type": "text",
+      "type": "range",
       "id": "padding_bottom",
-      "label": "Padding Bottom of the block",
-      "info": "number of pixel"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background"
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 20
     },
     {
       "type": "select",
@@ -261,7 +271,7 @@
           "label": "White"
         }
       ],
-      "default": "#d3e9ff"
+      "default": "#E57D25"
     },
 
     {
@@ -272,6 +282,211 @@
       "type": "collection",
       "id": "collection",
       "label": "Select Collection"
+    },
+
+    {
+      "type": "header",
+      "content": "Hex"
+    },
+    {
+      "type": "select",
+      "id": "hex_background_color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#ddaee1"
+    },
+    {
+      "type": "select",
+      "id": "hex_title_color",
+      "label": "Title Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
+    },
+    {
+      "type": "select",
+      "id": "hex_text_color",
+      "label": "Text Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#493293"
+    },
+    {
+      "type": "select",
+      "id": "hex_button_color",
+      "label": "Button Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#0D528E"
+    },
+    {
+      "type": "select",
+      "id": "hex_button_hover_color",
+      "label": "Button Hover Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
     }
   ],
   "presets": [
