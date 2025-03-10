@@ -95,8 +95,41 @@
         background-color: {{ section.settings.hex_button_hover_color }};
     }
 
-  {% comment %} @media only screen and (max-width:767px) {
-  } {% endcomment %}
+  @media only screen and (max-width: 1050px) {
+    {{ id }} .product-hex-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 10px;
+    }
+    {{ id }} .product-hex-outer:first-of-type {
+        top: -35px;
+        margin-left: 0;
+        margin-right: -40px;
+    }
+    {{ id }} .product-hex-outer:nth-of-type(2) {
+        margin-right: 0;
+        margin-left: -40px;
+        top: 160px;
+    }
+    {{ id }} .product-hex-outer:last-of-type {
+        top: 35px;
+        margin-left: 0;
+        margin-right: -40px;
+    }
+    {{ id }} .image-hex img {
+        width: 100%;
+        height: 100%;
+    }
+    {{ id }} .product-hex-inner {
+        min-height: 300px;
+    }
+    {{ id }} .description-hex .description {
+        font-size: 12px;
+    }
+    {{ id }} .title-hex .product-hex-inner {
+        padding: 0 35px;
+    }
+  }
 </style>
 
 <div class="product-hexes-container">
