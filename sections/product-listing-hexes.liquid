@@ -74,6 +74,14 @@
             <div class="product-hex-row">
           {% endif %}
         {% endfor %}
+
+        {% if remainder == 1 %}
+          <div></div>
+          <div></div>
+        {% endif %}
+        {% if remainder == 2 %}
+          <div></div>
+        {% endif %}
       </div>
     {% endif %}
   </div>

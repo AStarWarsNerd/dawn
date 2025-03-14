@@ -14,6 +14,11 @@
     padding: 75px 0px;
 }
 
+.product-hex-row div:empty {
+    display: block !important;
+    flex: 1;
+}
+
 .product-hex-outer {
     position: relative;
     flex: 1;
