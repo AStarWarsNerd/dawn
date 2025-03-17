@@ -37,7 +37,14 @@
 
 <div class="product-hexes-container product-listing-hexes">
   <div class="page-width page-width-desktop">
-    <h2>{{ section.settings.title }}</h2>
+    {% if section.settings.title != null %}
+      <div class="hex-title-row">
+        <h2>{{ section.settings.title }}</h2>
+        {% if section.settings.button_text != null %}
+          <a href="{{ section.settings.button_link }}" class="hex-button">{{ section.settings.button_text }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
 
     {% if section.settings.collection.products.size > 0 %}
       <div class="product-hex-row">
@@ -206,6 +213,31 @@
         }
       ],
       "default": "#E57D25"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+
+    {
+      "type": "header",
+      "content": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
 
     {

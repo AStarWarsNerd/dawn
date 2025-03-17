@@ -118,6 +118,12 @@
     top: -105px;
 }
 
+.hex-title-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 @media only screen and (max-width: 1050px) {
     .product-hex-row {
         display: grid;
