@@ -41,56 +41,62 @@
       <div class="hex-title-row">
         <h2>{{ section.settings.title }}</h2>
         {% if section.settings.button_text != null %}
-          <a href="{{ section.settings.button_link }}" class="hex-button">{{ section.settings.button_text }}</a>
+          <div class="hex-button-container">
+            <a href="{{ section.settings.button_link }}" class="hex-button">{{ section.settings.button_text }}</a>
+          </div>
         {% endif %}
       </div>
     {% endif %}
 
-    {% if section.settings.collection.products.size > 0 %}
-      <div class="product-hex-row">
-        {% for product in section.settings.collection.products %}
-          <div class="product-hex-outer">
-            <div class="product-hex title-hex">
-              <div class="product-hex-inner">
-                <a href="{{ product.url}}">
-                  <img
-                    src="{{ product.featured_image | img_url: 'medium' }}"
-                    alt="{{ product.title }}"
-                    width="200"
-                    height="200"
-                  >
-                </a>
+    <div class="product-hex-rows">
+      {% if section.settings.collection.products.size > 0 %}
+        <div class="product-hex-row">
+          {% for product in section.settings.collection.products %}
+            <div class="product-hex-outer">
+              <div class="product-hex title-hex">
+                <div class="product-hex-inner">
+                  <a href="{{ product.url}}">
+                    <img
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title }}"
+                      width="200"
+                      height="200"
+                    >
+                  </a>
 
-                <a href="{{ product.url}}">
-                  <h3>{{ product.title }}</h3>
-                </a>
+                  <a href="{{ product.url}}">
+                    <h3>{{ product.title }}</h3>
+                  </a>
 
-                <p class="price">{{ product.price | money }}</p>
+                  <p class="price">{{ product.price | money }}</p>
 
-                <form method="post" action="/cart/add">
-                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                  <button type="submit" class="hex-button">Add to Cart</button>
-                </form>
+                  <form method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <button type="submit" class="hex-button">Add to Cart</button>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
 
-          {% assign remainder = forloop.index | modulo: 3 %}
-          {% if remainder == 0 %}
-            </div>
-            <div class="product-hex-row">
+            {% assign remainder = forloop.index | modulo: 3 %}
+            {% if forloop.index < section.settings.collection.products.size %}
+              {% if remainder == 0 %}
+                </div>
+                <div class="product-hex-row">
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if remainder == 1 %}
+            <div></div>
+            <div></div>
           {% endif %}
-        {% endfor %}
-
-        {% if remainder == 1 %}
-          <div></div>
-          <div></div>
-        {% endif %}
-        {% if remainder == 2 %}
-          <div></div>
-        {% endif %}
-      </div>
-    {% endif %}
+          {% if remainder == 2 %}
+            <div></div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
 
@@ -153,8 +159,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -204,8 +218,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -284,8 +306,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -324,8 +354,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -364,8 +402,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -404,8 +450,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
@@ -444,8 +498,16 @@
           "label": "Purple"
         },
         {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
           "value": "#E57D25",
           "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
         },
         {
           "value": "#ffffff",
