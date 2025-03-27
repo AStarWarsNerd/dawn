@@ -19,8 +19,13 @@
 }
 
 @font-face {
-  font-family: "Bernie";
-  src: url("Bernie.otf") format("opentype");
+  font-family: "BerniePro";
+  src: url('BerniePro.woff2') format('woff2'),
+    url('BerniePro.woff') format('woff'),
+    url('BerniePro.ttf') format('truetype'),
+    url("BerniePro.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -31,7 +36,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Bernie" !important;
+  font-family: "BerniePro" !important;
+}
+
+h1 .title-number,
+h2 .title-number,
+h3 .title-number {
+  font-family: "Bio Rhyme" !important;
+  font-weight: bolder !important;
 }
 
 .hex-button {
@@ -88,7 +100,12 @@ a {
 
 .header__menu-item,
 .header__menu-item span {
-  font-family: "Bernie" !important;
+  font-family: "BerniePro" !important;
+}
+
+.avatar {
+  background-color: var(--color-light-pink) !important;
+  border-color: var(--color-purple) !important;
 }
 
 .product-card-wrapper .card,
@@ -1957,26 +1974,25 @@ input[type='checkbox'] {
 
 /* component-quantity */
 .quantity {
-  color: rgba(var(--color-foreground));
+  color: var(--color-purple);
   position: relative;
   width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+  border-color: var(--color-purple) !important;
 }
 
 .quantity:after {
   pointer-events: none;
   content: '';
   position: absolute;
-  top: var(--inputs-border-width);
-  right: var(--inputs-border-width);
-  bottom: var(--inputs-border-width);
-  left: var(--inputs-border-width);
-  border: 0.1rem solid transparent;
-  border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
-  transition: box-shadow var(--duration-short) ease;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  border: 2px solid var(--color-purple);
   z-index: 1;
 }
 
@@ -1989,8 +2005,7 @@ input[type='checkbox'] {
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: var(--inputs-radius-outset);
-  box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
+  border-radius: 10px;
   z-index: -1;
 }
 

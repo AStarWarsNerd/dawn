@@ -4,20 +4,21 @@
   align-items: flex-end;
 }
 
-.totals > * {
+.totals>* {
   font-size: 1.6rem;
   margin: 0;
 }
 
-.totals > h2 {
+.totals>h2 {
   font-size: calc(var(--font-heading-scale) * 1.6rem);
+  color: var(--color-blue);
 }
 
 .totals * {
   line-height: 1;
 }
 
-.totals > * + * {
+.totals>*+* {
   margin-left: 2rem;
 }
 
@@ -27,9 +28,11 @@
 
 .totals__total-value {
   font-size: 1.8rem;
+  color: var(--color-purple);
+  font-weight: bold;
 }
 
-.cart__ctas + .totals {
+.cart__ctas+.totals {
   margin-top: 2rem;
 }
 

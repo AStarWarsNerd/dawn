@@ -1,0 +1,236 @@
+{%- assign id = '#shopify-section-' | append: section.id -%}
+
+<style>
+  {{ id }} .title-with-content {
+      background-color: {{ section.settings.background_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  {{ id }} .title-with-content .page-width {
+      text-align: center;
+  }
+  {{ id }} .title-with-content h1 {
+      color: {{ section.settings.heading_color }};
+  }
+  {{ id }} .title-with-content .content {
+      color: {{ section.settings.content_color }};
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 20px;
+  }
+</style>
+
+<div class="title-with-content">
+  <div class="page-width page-width-desktop">
+    {% if section.settings.title != null %}
+      <h1>{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.content != null %}
+      <div class="content">{{ section.settings.content }}</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Title With Content",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#d3e9ff"
+    },
+
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "select",
+      "id": "content_color",
+      "label": "Content Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ddaee1",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Title With Content"
+    }
+  ]
+}
+{% endschema %}

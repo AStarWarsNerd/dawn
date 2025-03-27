@@ -17,7 +17,15 @@
 }
 
 .customer>h1 {
-  color: var(--color-orange);
+  color: var(--color-blue);
+}
+
+.customer__title {
+  color: var(--color-blue);
+}
+
+.customer.account h2 {
+  color: var(--color-blue);
 }
 
 .customer>h1,
@@ -46,11 +54,45 @@
 
 .customer strong {
   font-weight: normal;
-  color: rgb(var(--color-foreground));
+  color: var(--color-purple);
 }
 
 .customer h2.form__message {
   font-size: calc(var(--font-heading-scale) * 1.8rem);
+}
+
+.customer .merit-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.customer .merit-container p {
+  margin-bottom: 5px;
+}
+
+progress {
+  height: 30px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--color-purple);
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 9px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--color-orange);
+  border-radius: 10px;
+}
+
+.order-addresses {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -67,33 +109,80 @@
   margin-top: 0;
 }
 
+.customer.account .header-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customer.account .header-row .account-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.customer.account .header-row .account-info .hex-button {
+  margin-bottom: 10px;
+}
+
+.customer.account .order-container {
+  margin-top: 40px;
+}
+
+.customer.account .grad-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer.account .grad-container h4 {
+  color: var(--color-blue);
+  margin: 10px 0;
+}
+
+.customer .hex-button {
+  background-color: var(--color-blue);
+  color: var(--color-light-blue) !important;
+  text-decoration: none !important;
+  margin: 0 auto;
+}
+
+.customer .hex-button:hover {
+  background-color: var(--color-orange);
+}
+
 /* Customer Table */
 .customer table {
   table-layout: auto;
   border-collapse: collapse;
-  border-bottom: 0.01rem solid rgba(var(--color-foreground), 0.08);
+  border-radius: 10px;
+  border-bottom: 2px solid var(--color-blue);
   box-shadow: none;
   width: 100%;
   font-size: 1.6rem;
   position: relative;
+  color: var(--color-purple) !important;
+  background-color: var(--color-light-blue);
+}
+
+.customer.order .order-details-container {
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 750px) {
   .customer table {
     border: none;
-    box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.08);
+    box-shadow: 0 0 0 2px var(--color-blue);
   }
 }
 
 @media screen and (forced-colors: active) {
   .customer table {
-    border-top: 0.1rem solid transparent;
-    border-bottom: 0.1rem solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
   }
 }
 
 .customer tbody {
-  color: rgb(var(--color-foreground));
+  color: var(--color-purple);
 }
 
 .customer th,
@@ -123,6 +212,7 @@
   font-size: 1.2rem;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
+  font-family: "BerniePro" !important;
 }
 
 .customer tbody td:first-of-type {
@@ -169,7 +259,7 @@
 }
 
 .customer tbody tr {
-  border-top: 0.01rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 2px solid var(--color-blue);
 }
 
 @media screen and (min-width: 750px) {
@@ -222,12 +312,12 @@
 .customer thead::after,
 .customer tfoot::before {
   content: ' ';
-  height: 0.1rem;
+  height: 2px;
   width: 100%;
   display: block;
   position: absolute;
   left: 0;
-  background: rgba(var(--color-foreground), 0.08);
+  background: var(--color-blue);
 }
 
 @media screen and (forced-colors: active) {
@@ -367,6 +457,15 @@
   font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
+.customer a {
+  color: var(--color-purple);
+  transition: all 0.3s;
+}
+
+.customer a:hover {
+  color: var(--color-blue);
+}
+
 #customer_login_guest button {
   margin-top: 0;
 }
@@ -428,25 +527,25 @@
 }
 
 @media screen and (min-width: 990px) {
-  :is(.account, .order)>div:nth-of-type(2) {
+  :is(.account, .order)>div:nth-of-type(3) {
     display: flex;
     margin-top: 5rem;
   }
 }
 
 @media screen and (min-width: 990px) {
-  :is(.account, .order)>div:nth-of-type(2)>div:first-of-type {
+  :is(.account, .order)>div:nth-of-type(3)>div:first-of-type {
     flex-grow: 1;
     padding-right: 3.2rem;
   }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
-  .order>div:nth-of-type(2)>div:last-of-type {
+  .order>div:nth-of-type(3)>div:last-of-type {
     display: flex;
   }
 
-  .order>div:nth-of-type(2)>div:last-of-type div {
+  .order>div:nth-of-type(3)>div:last-of-type div {
     padding-right: 3.2rem;
   }
 }
@@ -454,6 +553,7 @@
 :is(.account, .order) p {
   margin: 0 0 2rem;
   font-size: 1.6rem;
+  color: var(--color-purple);
 }
 
 :is(.account, .order) h1 {
@@ -463,6 +563,7 @@
 :is(.account, .order) h2 {
   margin-top: 4rem;
   margin-bottom: 1rem;
+  color: var(--color-blue);
 }
 
 @media screen and (min-width: 990px) {
@@ -498,8 +599,7 @@
 .account table td:first-of-type a {
   padding: 1.1rem 1.5rem;
   text-decoration: none;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  border: 0.1rem solid transparent;
+  border: 0.1rem solid var(--color-blue);
   font-size: 1.2rem;
 }
 
@@ -567,7 +667,7 @@
 
 .order .fulfillment {
   width: fit-content;
-  border: 0.01rem solid rgba(var(--color-foreground), 0.2);
+  border: 2px solid var(--color-blue);
   padding: 1rem;
   margin-top: 1rem;
   font-size: 1.4rem;
@@ -726,12 +826,14 @@ li[data-address] {
 
 .addresses h2 {
   text-align: left;
+  color: var(--color-blue);
 }
 
 li[data-address]>h2 {
   text-align: center;
   font-size: calc(var(--font-heading-scale) * 1.8rem);
   margin-bottom: 0;
+  color: var(--color-blue);
 }
 
 @media only screen and (min-width: 750px) {
