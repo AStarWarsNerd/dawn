@@ -11,13 +11,47 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "title_with_content_r8Ahef": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ffc28e",
+        "title": "Wall Hangers",
+        "heading_color": "#0D528E",
+        "content": "Bring charm and personality to your space with our dog-shaped wall hangers! Designed purely for decoration, these delightful wall accents add a fun and stylish touch to any room. Perfect for dog lovers, they create a cozy, pet-friendly vibe in your home.",
+        "content_color": "#0D528E"
+      }
+    },
+    "product_listing_hexes_4pyDAE": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ffc28e",
+        "title": "",
+        "heading_color": "#E57D25",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "wall-hangers",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "title_with_content_r8Ahef",
+    "product_listing_hexes_4pyDAE"
   ]
 }

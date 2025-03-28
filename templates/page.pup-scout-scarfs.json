@@ -11,13 +11,47 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "title_with_content_3mHiUG": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Pup Scout Scarfs",
+        "heading_color": "#DC487F",
+        "content": "The official Pup Scout Pack uniform\n<p>Get one of our Scarfs or get the free pattern and make one yourself!</p>",
+        "content_color": "#DC487F"
+      }
+    },
+    "product_listing_hexes_wzr63W": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "",
+        "heading_color": "#DC487F",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "pup-scout-scarfs",
+        "hex_background_color": "#DC487F",
+        "hex_title_color": "#493293",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#493293",
+        "hex_button_hover_color": "#E57D25"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "title_with_content_3mHiUG",
+    "product_listing_hexes_wzr63W"
   ]
 }

@@ -11,13 +11,95 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "title_with_content_nHJ4MQ": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ddaee1",
+        "title": "Pup Scout Badges",
+        "heading_color": "#0D528E",
+        "content": "Start Training and Earning Badges With Your Pup!",
+        "content_color": "#0D528E"
+      }
+    },
+    "product_hexes_aY77PA": {
+      "type": "product-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ddaee1",
+        "title": "Training Badges",
+        "heading_color": "#0D528E",
+        "collection": "training-badges",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "product_hexes_6JgtEw": {
+      "type": "product-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ffc28e",
+        "title": "Socialization Badges",
+        "heading_color": "#493293",
+        "collection": "socialization-badges",
+        "hex_background_color": "#bfb4e1",
+        "hex_title_color": "#493293",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "product_hexes_p6xJtD": {
+      "type": "product-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#d3e9ff",
+        "title": "Adventure Badges",
+        "heading_color": "#E57D25",
+        "collection": "adventure-badges",
+        "hex_background_color": "#ffc28e",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "product_hexes_KGerwM": {
+      "type": "product-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ddaee1",
+        "title": "Specialty Badges",
+        "heading_color": "#0D528E",
+        "collection": "specialty-badges",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "title_with_content_nHJ4MQ",
+    "product_hexes_aY77PA",
+    "product_hexes_6JgtEw",
+    "product_hexes_p6xJtD",
+    "product_hexes_KGerwM"
   ]
 }
