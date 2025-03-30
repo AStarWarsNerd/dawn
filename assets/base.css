@@ -39,13 +39,6 @@ h4 {
   font-family: "BerniePro" !important;
 }
 
-h1 .title-number,
-h2 .title-number,
-h3 .title-number {
-  font-family: "Bio Rhyme" !important;
-  font-weight: bolder !important;
-}
-
 .hex-button {
   background-color: var(--color-blue);
   padding: 10px 30px;
@@ -1494,7 +1487,7 @@ shopify-accelerated-checkout-cart {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
-  color: rgb(var(--color-link));
+  color: var(--color-purple);
   margin-left: 0;
   padding-left: 0;
   min-height: 4.4rem;
@@ -3274,14 +3267,14 @@ details-disclosure>details {
 }
 
 .rte a {
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: var(--color-blue);
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
-  transition: text-decoration-thickness var(--duration-short) ease;
+  transition: all var(--duration-short) ease;
 }
 
 .rte a:hover {
-  color: rgb(var(--color-link));
+  color: var(--color-orange);
   text-decoration-thickness: 0.2rem;
 }
 

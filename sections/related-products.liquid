@@ -1,6 +1,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+{{ 'product-hexes.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -10,6 +11,18 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  product-recommendations .product-hex-outer {
+    background-color: var(--color-light-orange);
+  }
+
+  product-recommendations .product-hex {
+    background-color: var(--color-light-pink);
+  }
+
+  product-recommendations .product-hex-inner {
+    background-color: var(--color-light-orange);
   }
 
   @media screen and (min-width: 750px) {
@@ -31,26 +44,52 @@
       <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>
-      <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
-      >
-        {% assign skip_card_product_styles = false %}
-        {% for recommendation in recommendations.products %}
-          <li class="grid__item">
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              image_shape: section.settings.image_shape,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              skip_styles: skip_card_product_styles
-            %}
-          </li>
-          {%- assign skip_card_product_styles = true -%}
+
+      <div class="product-hex-row">
+        {% for product in recommendations.products %}
+          <div class="product-hex-outer">
+            <div class="product-hex title-hex">
+              <div class="product-hex-inner">
+                <a href="{{ product.url}}">
+                  <img
+                    src="{{ product.featured_image | img_url: 'medium' }}"
+                    alt="{{ product.title }}"
+                    width="200"
+                    height="200"
+                  >
+                </a>
+
+                <a href="{{ product.url}}">
+                  <h3>{{ product.title }}</h3>
+                </a>
+
+                <p class="price">{{ product.price | money }}</p>
+
+                <form method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                  <button type="submit" class="hex-button">Add to Cart</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          {% assign remainder = forloop.index | modulo: 3 %}
+          {% if forloop.index < section.settings.collection.products.size %}
+            {% if remainder == 0 %}
+              </div>
+              <div class="product-hex-row">
+            {% endif %}
+          {% endif %}
         {% endfor %}
-      </ul>
+
+        {% if remainder == 1 %}
+          <div></div>
+          <div></div>
+        {% endif %}
+        {% if remainder == 2 %}
+          <div></div>
+        {% endif %}
+      </div>
     {% endif %}
   </product-recommendations>
   {% if section.settings.image_shape == 'arch' %}
@@ -134,7 +173,7 @@
           "value": "2",
           "label": "t:sections.related-products.settings.columns_mobile.options__2.label"
         }
-      ]    
+      ]
     },
     {
       "type": "color_scheme",
