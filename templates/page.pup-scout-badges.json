@@ -40,7 +40,7 @@
         "collection": "training-badges",
         "hex_background_color": "#d3e9ff",
         "hex_title_color": "#0D528E",
-        "hex_text_color": "#493293",
+        "hex_text_color": "#0D528E",
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
       }
@@ -72,22 +72,6 @@
         "collection": "adventure-badges",
         "hex_background_color": "#ffc28e",
         "hex_title_color": "#0D528E",
-        "hex_text_color": "#493293",
-        "hex_button_color": "#0D528E",
-        "hex_button_hover_color": "#E57D25"
-      }
-    },
-    "product_hexes_KGerwM": {
-      "type": "product-hexes",
-      "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "background_color": "#ddaee1",
-        "title": "Specialty Badges",
-        "heading_color": "#0D528E",
-        "collection": "specialty-badges",
-        "hex_background_color": "#d3e9ff",
-        "hex_title_color": "#0D528E",
         "hex_text_color": "#0D528E",
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
@@ -99,7 +83,6 @@
     "title_with_content_nHJ4MQ",
     "product_hexes_aY77PA",
     "product_hexes_6JgtEw",
-    "product_hexes_p6xJtD",
-    "product_hexes_KGerwM"
+    "product_hexes_p6xJtD"
   ]
 }

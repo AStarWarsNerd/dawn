@@ -156,7 +156,7 @@ details[open].menu-opening>.menu-drawer__submenu {
   font-size: 1.4rem;
   width: 100%;
   background-color: transparent;
-  font-family: var("Bio Rhyme", serif);
+  font-family: "BerniePro" !important;
   font-style: var(--font-body-style);
   text-align: left;
 }

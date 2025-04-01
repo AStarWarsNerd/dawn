@@ -14,7 +14,7 @@
     "favicon": "shopify://shop_images/pupsnackpackfav.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
-    "type_body_font": "assistant_n4",
+    "type_body_font": "bio_rhyme_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -214,6 +214,17 @@
           "button": "#ffffff",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-6343c61e-6562-4bea-85e7-cb7c0ee126f1": {
+        "settings": {
+          "background": "#ffc28e",
+          "background_gradient": "",
+          "text": "#0d528e",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }

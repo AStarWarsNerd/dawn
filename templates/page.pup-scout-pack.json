@@ -11,13 +11,264 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "title_with_content_xbzPCG": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Pup Scout Pack",
+        "heading_color": "#493293",
+        "content": "The Pup Scout Pack is a fun and engaging dog training and social program, designed to strengthen the bond between dogs and their owners.",
+        "content_color": "#493293"
+      }
+    },
+    "rich_text_nqhJHg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HJmYa6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Mission Statement",
+            "heading_size": "h2"
+          }
+        },
+        "text_zPMH7A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspire our four-legged friends to explore, learn, and socialize while strengthening the bond with their humans. Through playful training, safe exploration, and fun challenges, every pup learns valuable skills.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HJmYa6",
+        "text_zPMH7A"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_dfPTaX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WawpgD": {
+          "type": "column",
+          "settings": {
+            "title": "Loyalty & Love",
+            "text": "<p>Cherish friendships with humans and fellow pups.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JG3wEy": {
+          "type": "column",
+          "settings": {
+            "title": "Playfulness",
+            "text": "<p>Embrace fun and exploration.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_teDfw8": {
+          "type": "column",
+          "settings": {
+            "title": "Respect & Safety",
+            "text": "<p>Follow commands and be gentle with others and the environment.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wahqVi": {
+          "type": "column",
+          "settings": {
+            "title": "Curiosity & Growth",
+            "text": "<p>Encourage learning through new challenges.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_WawpgD",
+        "column_JG3wEy",
+        "column_teDfw8",
+        "column_wahqVi"
+      ],
+      "settings": {
+        "title": "Core Values",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_JR3eQf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_niRcVp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Scout Scarf",
+            "heading_size": "h1"
+          }
+        },
+        "text_bDiccb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The official uniform of the Pup Scout Pack. Customize yours by adding your pup's badges as they earn them!<br/><br/>Get one of our available Scarfs or get the free template to make your own.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_myDUPc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Your Scarf",
+            "button_link": "shopify://pages/pup-scout-scarfs",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_niRcVp",
+        "text_bDiccb",
+        "button_myDUPc"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-e0282250-009b-457b-ad40-91a4b043367a",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_PYfjw7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tHmXQ4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Badges and Mutt Merit",
+            "heading_size": "h1"
+          }
+        },
+        "text_cjFFkh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Badges are a way to track you pups progress and add style to your Scout Scarf. Each kind of badge will give your pup a different number of Mutt Merits. Once you have enough Merit to graduate ranks fill out the graduation form on the <a href=\"/account\" title=\"/account\">Account</a> page.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tHmXQ4",
+        "text_cjFFkh"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_zbgkng": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JcK8xB": {
+          "type": "column",
+          "settings": {
+            "title": "Training",
+            "text": "<p><strong>1 Merit</strong></p><p>Focuses on essential obedience and skill-building, helping dogs master commands, manners, and good behavior through positive reinforcement.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gqtFDd": {
+          "type": "column",
+          "settings": {
+            "title": "Socialization",
+            "text": "<p><strong>3 Merits</strong></p><p>Encourages friendly interactions with people, other dogs, and new environments to build confidence and ensure well-mannered companionship.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qKzYrR": {
+          "type": "column",
+          "settings": {
+            "title": "Adventure",
+            "text": "<p><strong>3 Merits</strong></p><p>Celebrates outdoor exploration and physical activity, rewarding dogs for hiking, swimming, agility, and other exciting challenges.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_A9VjQH": {
+          "type": "column",
+          "settings": {
+            "title": "Specialty",
+            "text": "<p><strong>5 Merits</strong></p><p>Recognizes unique skills and talents, such as therapy work, scent detection, or tricks, allowing dogs to showcase their individual strengths.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JcK8xB",
+        "column_gqtFDd",
+        "column_qKzYrR",
+        "column_A9VjQH"
+      ],
+      "settings": {
+        "title": "Badge Types",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "View All Badges",
+        "button_link": "shopify://pages/pup-scout-badges",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "title_with_content_xbzPCG",
+    "rich_text_nqhJHg",
+    "multicolumn_dfPTaX",
+    "image_with_text_JR3eQf",
+    "rich_text_PYfjw7",
+    "multicolumn_zbgkng"
   ]
 }

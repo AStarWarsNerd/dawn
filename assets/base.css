@@ -101,6 +101,26 @@ a {
   border-color: var(--color-purple) !important;
 }
 
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  background-color: var(--color-blue) !important;
+}
+
+.slider-counter__link--dots .dot {
+  border: .1rem solid var(--color-blue) !important;
+}
+
+.slider-button .svg-wrapper {
+  color: var(--color-blue);
+}
+
+#cart-notification-form .button {
+  margin: 0 auto;
+}
+
+.cart-notification__links .link.button-label {
+  color: var(--color-blue);
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

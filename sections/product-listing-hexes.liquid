@@ -70,10 +70,14 @@
 
                   <p class="price">{{ product.price | money }}</p>
 
-                  <form method="post" action="/cart/add">
-                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                    <button type="submit" class="hex-button">Add to Cart</button>
-                  </form>
+                  {% if product.variants.size > 1 %}
+                    <a href="{{ product.url }}" class="hex-button">View Options</a>
+                  {% else %}
+                    <form method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <button type="submit" class="hex-button">Add to Cart</button>
+                    </form>
+                  {% endif %}
                 </div>
               </div>
             </div>
