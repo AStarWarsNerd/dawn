@@ -35,16 +35,35 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "background_color": "#bfb4e1",
-        "title": "",
-        "heading_color": "#DC487F",
+        "title": "Small Scout Scarfs",
+        "heading_color": "#493293",
         "content": "",
         "button_text": "",
         "button_link": "",
-        "collection": "pup-scout-scarfs",
+        "collection": "small-scout-scarfs",
         "hex_background_color": "#DC487F",
         "hex_title_color": "#493293",
         "hex_text_color": "#493293",
         "hex_button_color": "#493293",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "product_listing_hexes_mHq8LN": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ebcaed",
+        "title": "Medium Scout Scarfs",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "medium-scout-scarfs",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
       }
     }
@@ -52,6 +71,7 @@
   "order": [
     "main",
     "title_with_content_3mHiUG",
-    "product_listing_hexes_wzr63W"
+    "product_listing_hexes_wzr63W",
+    "product_listing_hexes_mHq8LN"
   ]
 }

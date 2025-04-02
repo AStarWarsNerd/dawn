@@ -22,7 +22,7 @@
       "settings": {
         "padding_top": 20,
         "padding_bottom": 20,
-        "background_color": "#ddaee1",
+        "background_color": "#ebcaed",
         "title": "Pup Scout Badges",
         "heading_color": "#0D528E",
         "content": "Start Training and Earning Badges With Your Pup!",
@@ -34,7 +34,7 @@
       "settings": {
         "padding_top": 20,
         "padding_bottom": 20,
-        "background_color": "#ddaee1",
+        "background_color": "#ebcaed",
         "title": "Training Badges",
         "heading_color": "#0D528E",
         "collection": "training-badges",

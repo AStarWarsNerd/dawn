@@ -11,7 +11,7 @@
   --color-medium-blue: #7ba8cf;
   --color-blue: #0D528E;
   --color-pink: #DC487F;
-  --color-light-pink: #ddaee1;
+  --color-light-pink: #ebcaed;
   --color-purple: #493293;
   --color-light-purple: #bfb4e1;
   --color-orange: #E57D25;
@@ -547,6 +547,16 @@ table:not([class]) th {
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none !important;
+  }
+
+  .banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {
+    background: #ffffffd6 !important;
+    width: fit-content;
+    border-radius: 10px;
+  }
+
+  .title-wrapper-with-link {
+    justify-content: space-around !important;
   }
 }
 

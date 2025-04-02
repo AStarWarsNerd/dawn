@@ -154,14 +154,15 @@
         "button_myDUPc"
       ],
       "settings": {
+        "image": "shopify://shop_images/17_b069ee45-da1f-4bc9-b798-2083840dcb11.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-3",
         "color_scheme": "scheme-e0282250-009b-457b-ad40-91a4b043367a",
         "padding_top": 36,
