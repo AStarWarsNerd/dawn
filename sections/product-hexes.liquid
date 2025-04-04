@@ -19,6 +19,8 @@
   }
   {{ id }} .product-hex h3 {
       color: {{ section.settings.hex_title_color }};
+      max-width: 85%;
+      margin: 0 auto;
   }
   {{ id }} .product-hex-inner {
       background-color: {{ section.settings.hex_background_color }};
@@ -39,53 +41,55 @@
   <div class="page-width page-width-desktop">
     <h2>{{ section.settings.title }}</h2>
 
-    {% if section.settings.collection.products.size > 0 %}
-      {% for product in section.settings.collection.products %}
-        <div class="product-hex-row">
-          <div class="product-hex-outer">
-            <div class="product-hex image-hex">
-              <div class="product-hex-inner">
-                <a href="{{ product.url}}">
-                  <img
-                    src="{{ product.featured_image | img_url: 'medium' }}"
-                    alt="{{ product.title }}"
-                    width="350"
-                    height="350"
-                  >
-                </a>
+    <div class="product-listing-hexes">
+      {% if section.settings.collection.products.size > 0 %}
+        {% for product in section.settings.collection.products %}
+          <div class="product-hex-row">
+            <div class="product-hex-outer">
+              <div class="product-hex image-hex">
+                <div class="product-hex-inner">
+                  <a href="{{ product.url}}">
+                    <img
+                      src="{{ product.featured_image | img_url: 'medium' }}"
+                      alt="{{ product.title }}"
+                      width="350"
+                      height="350"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-hex-outer">
+              <div class="product-hex title-hex">
+                <div class="product-hex-inner">
+                  <a href="{{ product.url}}">
+                    <h3>{{ product.title }}</h3>
+                  </a>
+
+                  <p class="price">{{ product.price | money }}</p>
+
+                  <form method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <button type="submit" class="hex-button">Add to Cart</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-hex-outer">
+              <div class="product-hex description-hex">
+                <div class="product-hex-inner">
+                  <h3>How to Earn</h3>
+
+                  <div class="description">{{ product.description }}</div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="product-hex-outer">
-            <div class="product-hex title-hex">
-              <div class="product-hex-inner">
-                <a href="{{ product.url}}">
-                  <h3>{{ product.title }}</h3>
-                </a>
-
-                <p class="price">{{ product.price | money }}</p>
-
-                <form method="post" action="/cart/add">
-                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                  <button type="submit" class="hex-button">Add to Cart</button>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-hex-outer">
-            <div class="product-hex description-hex">
-              <div class="product-hex-inner">
-                <h3>How to Earn</h3>
-
-                <div class="description">{{ product.description }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </div>
 
