@@ -24,9 +24,9 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "background_color": "#ffc28e",
-        "title": "Rank Graduation Form",
+        "title": "Custom Request Form",
         "heading_color": "#493293",
-        "content": "Congrats! Your pup has completed enough badges to graduate from their current rank. Upload a photo of them with some of the badges they earned!",
+        "content": "Give us a short description and attach an image or what your looking for.",
         "content_color": "#493293"
       }
     },
@@ -36,7 +36,7 @@
         "forms_inline_g34JBc": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "form_id": "403132",
+            "form_id": "426328",
             "text_color": "#493293",
             "button_background_color": "#334fb4",
             "button_label_color": "#ffffff",
@@ -54,6 +54,7 @@
       "block_order": [
         "forms_inline_g34JBc"
       ],
+      "custom_css": [],
       "settings": {
         "include_margins": true
       }

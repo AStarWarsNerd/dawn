@@ -25,8 +25,8 @@
         "background_color": "#bfb4e1",
         "title": "Contact Us",
         "heading_color": "#0D528E",
-        "content": "",
-        "content_color": "#E57D25"
+        "content": "Have a question? Send us a message here or email us at info@pupsnackpack.com!\n<br>\n<a href=\"/pages/custom-request\">Click Here for custom product requests</a>",
+        "content_color": "#0D528E"
       }
     },
     "form": {
