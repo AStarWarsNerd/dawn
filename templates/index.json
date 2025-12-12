@@ -12,24 +12,6 @@
     "slideshow_UYb6d7": {
       "type": "slideshow",
       "blocks": {
-        "slide_BzjXht": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/PS_Banner.png",
-            "image_overlay_opacity": 0,
-            "heading": "Pup Scout Pack",
-            "heading_size": "h1",
-            "subheading": "Learn about joining the scouts and earning badges!",
-            "button_label": "Learn More",
-            "link": "shopify://pages/pup-scout-pack",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-5"
-          }
-        },
         "slide_86iTQU": {
           "type": "slide",
           "settings": {
@@ -37,7 +19,7 @@
             "image_overlay_opacity": 0,
             "heading": "Lick Mats",
             "heading_size": "h1",
-            "subheading": "Unique designs for pup enrichment!",
+            "subheading": "Unique designs for pup and cat enrichment!",
             "button_label": "Shop Now",
             "link": "shopify://pages/lick-mats",
             "button_style_secondary": false,
@@ -55,9 +37,27 @@
             "image_overlay_opacity": 0,
             "heading": "Wall Hangers",
             "heading_size": "h1",
-            "subheading": "Hand made hangers designed after your pup!",
+            "subheading": "Hand made hangers designed after your pet!",
             "button_label": "Shop Now",
             "link": "shopify://pages/wall-hangers",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-5"
+          }
+        },
+        "slide_BzjXht": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/PS_Banner.png",
+            "image_overlay_opacity": 0,
+            "heading": "Pup Scout Pack",
+            "heading_size": "h1",
+            "subheading": "Learn about joining the scouts and earning badges!",
+            "button_label": "Learn More",
+            "link": "shopify://pages/pup-scout-pack",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
@@ -68,9 +68,9 @@
         }
       },
       "block_order": [
-        "slide_BzjXht",
         "slide_86iTQU",
-        "slide_6pLzYB"
+        "slide_6pLzYB",
+        "slide_BzjXht"
       ],
       "custom_css": [
         ".slider-buttons {background-color: #d3e9ff;}"
@@ -84,6 +84,64 @@
         "image_behavior": "none",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "product_listing_hexes_67M3F4": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "New Wall Hangers",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "Shop All Wall Hangers",
+        "button_link": "shopify://pages/wall-hangers",
+        "collection": "featured-wall-hangers",
+        "hex_background_color": "#DC487F",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "product_listing_hexes_KWqxLH": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#d3e9ff",
+        "title": "Our Favorite Lick Mats",
+        "heading_color": "#E57D25",
+        "content": "",
+        "button_text": "Shop All Lick Mats",
+        "button_link": "shopify://pages/lick-mats",
+        "collection": "featured-lick-mats",
+        "hex_background_color": "#ebcaed",
+        "hex_title_color": "#E57D25",
+        "hex_text_color": "#E57D25",
+        "hex_button_color": "#E57D25",
+        "hex_button_hover_color": "#0D528E"
+      }
+    },
+    "product_listing_hexes_NdyNwp": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Slow Feeder Bowls",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "Shop All Bowls",
+        "button_link": "shopify://pages/bowls",
+        "collection": "featured-bowls",
+        "hex_background_color": "#DC487F",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
       }
     },
     "multicolumn_zWWqWK": {
@@ -138,50 +196,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "product_listing_hexes_KWqxLH": {
-      "type": "product-listing-hexes",
-      "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "background_color": "#d3e9ff",
-        "title": "Our Favorite Lick Mats",
-        "heading_color": "#E57D25",
-        "content": "",
-        "button_text": "Shop All Lick Mats",
-        "button_link": "shopify://pages/lick-mats",
-        "collection": "featured-lick-mats",
-        "hex_background_color": "#ebcaed",
-        "hex_title_color": "#E57D25",
-        "hex_text_color": "#E57D25",
-        "hex_button_color": "#E57D25",
-        "hex_button_hover_color": "#0D528E"
-      }
-    },
-    "product_listing_hexes_67M3F4": {
-      "type": "product-listing-hexes",
-      "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "background_color": "#bfb4e1",
-        "title": "New Wall Hangers",
-        "heading_color": "#0D528E",
-        "content": "",
-        "button_text": "Shop All Wall Hangers",
-        "button_link": "shopify://pages/wall-hangers",
-        "collection": "featured-wall-hangers",
-        "hex_background_color": "#DC487F",
-        "hex_title_color": "#0D528E",
-        "hex_text_color": "#0D528E",
-        "hex_button_color": "#0D528E",
-        "hex_button_hover_color": "#E57D25"
-      }
     }
   },
   "order": [
     "slideshow_UYb6d7",
-    "multicolumn_zWWqWK",
+    "product_listing_hexes_67M3F4",
     "product_listing_hexes_KWqxLH",
-    "product_listing_hexes_67M3F4"
+    "product_listing_hexes_NdyNwp",
+    "multicolumn_zWWqWK"
   ]
 }

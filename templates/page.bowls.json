@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "title_with_content_kqF8QR": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Slow Feeder Bowls",
+        "heading_color": "#0D528E",
+        "content": "",
+        "content_color": "#0D528E"
+      }
+    },
+    "product_listing_hexes_UaBhcy": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "",
+        "heading_color": "#E57D25",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "bowls",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "title_with_content_kqF8QR",
+    "product_listing_hexes_UaBhcy"
+  ]
+}
