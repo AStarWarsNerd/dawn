@@ -396,6 +396,37 @@ a.product__text {
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
+/* Breadcrumb */
+.product .breadcrumb {
+  width: 100%;
+}
+
+.product .breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.product .breadcrumb ul li::before {
+  content: "/";
+  display: inline-block;
+  color: var(--color-purple);
+}
+
+.product .breadcrumb ul li:first-of-type::before {
+  content: "";
+  display: none;
+}
+
+.product .breadcrumb a {
+  color: var(--color-purple) !important;
+}
+
+.product .breadcrumb a:hover {
+  color: var(--color-orange) !important;
+}
+
 @media screen and (max-width: 749px) {
   .product__media-list {
     margin-left: -2.5rem;

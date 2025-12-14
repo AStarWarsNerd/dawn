@@ -75,6 +75,50 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+      {% for c in product.collections %}
+        {% if c.handle == 'lick-mats' %}
+          {% assign has_collection = true %}
+          {% assign collection_name = 'Lick Mats' %}
+          {% assign collection_link = '/pages/lick-mats' %}
+          {% break %}
+        {% elsif c.handle == 'wall-hangers' %}
+          {% assign has_collection = true %}
+          {% assign collection_name = 'Wall Hangers' %}
+          {% assign collection_link = '/pages/wall-hangers' %}
+          {% break %}
+        {% elsif c.handle == 'bowls' %}
+          {% assign has_collection = true %}
+          {% assign collection_name = 'Bowls' %}
+          {% assign collection_link = '/pages/bowls' %}
+          {% break %}
+        {% elsif c.handle == 'snackeez' %}
+          {% assign has_collection = true %}
+          {% assign collection_name = 'Snackeez' %}
+          {% assign collection_link = '/pages/snackeez' %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_collection %}
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ul>
+            <li>
+              <a href="{{ routes.root_url }}">Home</a>
+            </li>
+
+            <li>
+              <a href="{{ collection_link }}">
+                {{ collection_name }}
+              </a>
+            </li>
+
+            <li aria-current="page">
+              {{ product.title }}
+            </li>
+          </ul>
+        </nav>
+      {% endif %}
+
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
@@ -356,7 +400,10 @@
                                 </dt>
                                 <dd>
                                   <span class="price-per-item--current">
-                                    {{- 'products.product.volume_pricing.price_at_each_html' | t: price: variant_price -}}
+                                    {{-
+                                      'products.product.volume_pricing.price_at_each_html'
+                                      | t: price: variant_price
+                                    -}}
                                   </span>
                                 </dd>
                               </dl>
@@ -1674,7 +1721,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_2.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_2",
@@ -1874,7 +1921,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_3.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_3",
@@ -2176,7 +2223,7 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
-    },    
+    },
     {
       "type": "select",
       "id": "media_position",
