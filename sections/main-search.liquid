@@ -2,6 +2,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-search.css' | asset_url | stylesheet_tag }}
+{{ 'product-hexes.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -226,7 +227,10 @@
             </aside>
           {%- endif -%}
         {%- endif -%}
-        <div class="product-grid-container" id="ProductGridContainer">
+        <div
+          class="product-grid-container page-width page-width-desktop product-hexes-container product-listing-hexes"
+          id="ProductGridContainer"
+        >
           {%- if search.results.size == 0 and search.filters != empty -%}
             <div
               class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
@@ -246,82 +250,59 @@
               </div>
             </div>
           {%- else -%}
-            <div
-              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-              id="product-grid"
-              data-id="{{ section.id }}"
-            >
-              <div class="loading-overlay gradient"></div>
-              <ul
-                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
-                role="list"
-              >
-                {%- assign skip_card_product_styles = false -%}
+            <div class="product-hex-rows">
+              <div class="product-hex-row">
                 {%- for item in search.results -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
+                  {%- case item.object_type -%}
+                    {%- when 'product' -%}
+                      <div class="product-hex-outer">
+                        <div class="product-hex title-hex">
+                          <div class="product-hex-inner">
+                            <a href="{{ item.url}}">
+                              <img
+                                src="{{ item.featured_image | img_url: 'medium' }}"
+                                alt="{{ item.title }}"
+                                width="200"
+                                height="200"
+                              >
+                            </a>
 
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                    {% endif %}
-                  >
-                    {%- case item.object_type -%}
-                      {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product',
-                          card_product: item,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          image_shape: section.settings.image_shape,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating,
-                          lazy_load: lazy_load,
-                          skip_styles: skip_card_product_styles
-                        %}
-                        {%- assign skip_card_product_styles = true -%}
-                      {%- when 'article' -%}
-                        {% render 'article-card',
-                          article: item,
-                          show_image: true,
-                          show_date: section.settings.article_show_date,
-                          show_author: section.settings.article_show_author,
-                          show_badge: true,
-                          media_aspect_ratio: 1,
-                          lazy_load: lazy_load
-                        %}
-                      {%- when 'page' -%}
-                        <div class="article-card-wrapper card-wrapper underline-links-hover">
-                          <div
-                            class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
-                            style="--ratio-percent: 100%;"
-                          >
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
-                                    {{ item.title | truncate: 50 | escape }}
-                                  </a>
-                                </h3>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-{{ settings.color_schemes | first }}">
-                                  {{- 'templates.search.page' | t -}}
-                                </span>
-                              </div>
-                            </div>
+                            <a href="{{ item.url}}">
+                              <h3>{{ item.title }}</h3>
+                            </a>
+
+                            <p class="price">{{ item.price | money }}</p>
+
+                            {% if item.variants.size > 1 %}
+                              <a href="{{ item.url }}" class="hex-button">View Options</a>
+                            {% else %}
+                              <form method="post" action="/cart/add">
+                                <input type="hidden" name="id" value="{{ item.variants.first.id }}">
+                                <button type="submit" class="hex-button">Add to Cart</button>
+                              </form>
+                            {% endif %}
                           </div>
                         </div>
-                    {%- endcase -%}
-                  </li>
+                      </div>
+
+                      {% assign remainder = forloop.index | modulo: 3 %}
+                      {% if forloop.index < search.results.size %}
+                        {% if remainder == 0 %}
+                          </div>
+                          <div class="product-hex-row">
+                        {% endif %}
+                      {% endif %}
+                  {%- endcase -%}
                 {%- endfor -%}
-              </ul>
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
-              {%- endif -%}
+
+                {% if remainder == 1 %}
+                  <div></div>
+                  <div></div>
+                {% endif %}
+                {% if remainder == 2 %}
+                  <div></div>
+                {% endif %}
+              </div>
             </div>
           {%- endif -%}
         </div>
@@ -363,7 +344,7 @@
           "label": "t:sections.main-search.settings.columns_mobile.options__2.label"
         }
       ]
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.main-search.settings.header__1.content"
