@@ -13,10 +13,22 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_E6rjAR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_E6rjAR"
+      ],
       "settings": {
         "color_scheme": "scheme-4",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Subscribe to Our Emails",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": true,
