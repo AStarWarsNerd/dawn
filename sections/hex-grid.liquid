@@ -1,0 +1,373 @@
+{{ 'hex-grid.css' | asset_url | stylesheet_tag }}
+
+{%- assign id = '#shopify-section-' | append: section.id -%}
+
+<style>
+  {{ id }} .hex-grid-container {
+      background-color: {{ section.settings.background_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  {{ id }} .hex-grid-container h2,
+  {{ id }} .hex-grid-container .content {
+      color: {{ section.settings.heading_color }};
+  }
+  {{ id }} .grid-hex-outer {
+      background-color: {{ section.settings.hex_background_color }};
+  }
+  {{ id }} .grid-hex {
+      background-color: {{ section.settings.background_color }};
+  }
+  {{ id }} .grid-hex h3 {
+      color: {{ section.settings.hex_title_color }};
+      max-width: 85%;
+      margin: 0 auto;
+  }
+  {{ id }} .grid-hex-inner {
+      background-color: {{ section.settings.hex_background_color }};
+      color: {{ section.settings.hex_text_color }};
+  }
+  {{ id }} .title-hex .price {
+      color: {{ section.settings.hex_text_color }};
+  }
+  {{ id }} .title-hex .hex-button {
+      background-color: {{ section.settings.hex_button_color }};
+  }
+  {{ id }} .title-hex .hex-button:hover {
+      background-color: {{ section.settings.hex_button_hover_color }};
+  }
+</style>
+
+<div class="hex-grid-container hex-grid">
+  <div class="page-width page-width-desktop">
+    {% if section.settings.title != null %}
+      <div class="hex-title-row">
+        <h2>{{ section.settings.title }}</h2>
+        {% if section.settings.content != null %}
+          <div class="content">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="grid-hex-rows">
+      {% if section.blocks.size > 0 %}
+        <div class="grid-hex-row">
+          {% for block in section.blocks %}
+            <div class="grid-hex-outer">
+              <div class="grid-hex title-hex">
+                <div class="grid-hex-inner">
+                  <img
+                    src="{{ block.settings.hex_image | img_url: 'medium' }}"
+                    alt="{{ block.settings.hex_text }}"
+                    width="100"
+                    height="100"
+                  >
+
+                  <h3>{{ block.settings.hex_text }}</h3>
+                </div>
+              </div>
+            </div>
+
+            {% assign remainder = forloop.index | modulo: 5 %}
+            {% if forloop.index < section.blocks.size %}
+              {% if remainder == 0 %}
+                </div>
+                <div class="grid-hex-row">
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if remainder == 1 %}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          {% elsif remainder == 2 %}
+            <div></div>
+            <div></div>
+            <div></div>
+          {% elsif remainder == 3 %}
+            <div></div>
+            <div></div>
+          {% elsif remainder == 4 %}
+            <div></div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hex Grid",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#d3e9ff"
+    },
+
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+
+    {
+      "type": "header",
+      "content": "Hex Settings"
+    },
+    {
+      "type": "select",
+      "id": "hex_background_color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#ebcaed"
+    },
+    {
+      "type": "select",
+      "id": "hex_title_color",
+      "label": "Title Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#E57D25"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Hexes",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hex_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "hex_text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hex Grid"
+    }
+  ]
+}
+{% endschema %}
