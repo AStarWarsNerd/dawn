@@ -33,7 +33,7 @@
       "type": "product-listing-hexes",
       "settings": {
         "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_bottom": 0,
         "background_color": "#bfb4e1",
         "title": "",
         "heading_color": "#E57D25",
@@ -47,11 +47,209 @@
         "hex_button_color": "#493293",
         "hex_button_hover_color": "#E57D25"
       }
+    },
+    "hex_grid_Gwyjhc": {
+      "type": "hex-grid",
+      "blocks": {
+        "column_aKrJ6W": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/strawberries.png",
+            "hex_text": "Strawberries"
+          }
+        },
+        "column_GN4hcG": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/eggs.png",
+            "hex_text": "Eggs"
+          }
+        },
+        "column_QYKgDy": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/peas.png",
+            "hex_text": "Peas"
+          }
+        },
+        "column_TJVGqH": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/meat.png",
+            "hex_text": "Cooked Meat"
+          }
+        },
+        "column_cQrRDP": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/carrots.png",
+            "hex_text": "Carrots"
+          }
+        },
+        "column_T7ikje": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/watermelon.png",
+            "hex_text": "Watermelon"
+          }
+        },
+        "column_4Ednxe": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/cheese.png",
+            "hex_text": "Cheese"
+          }
+        },
+        "column_xjjWhA": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/yogurt.png",
+            "hex_text": "Yogurt"
+          }
+        },
+        "column_Nwy9t3": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/spinach.png",
+            "hex_text": "Spinach"
+          }
+        },
+        "column_dP4CQy": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/pumpkin.png",
+            "hex_text": "Pumpkin"
+          }
+        }
+      },
+      "block_order": [
+        "column_aKrJ6W",
+        "column_GN4hcG",
+        "column_QYKgDy",
+        "column_TJVGqH",
+        "column_cQrRDP",
+        "column_T7ikje",
+        "column_4Ednxe",
+        "column_xjjWhA",
+        "column_Nwy9t3",
+        "column_dP4CQy"
+      ],
+      "name": "Hex Grid",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ebcaed",
+        "title": "What to Put on a Lick Mat",
+        "heading_color": "#0D528E",
+        "content": "Wondering what to put on a lick mat? Here's some example meals and treats!",
+        "hex_background_color": "#0D528E",
+        "hex_title_color": "#ebcaed"
+      }
+    },
+    "hex_grid_HiF6AK": {
+      "type": "hex-grid",
+      "blocks": {
+        "column_THYFLa": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/cherries.png",
+            "hex_text": "Cherries"
+          }
+        },
+        "column_PmDyCy": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/onion.png",
+            "hex_text": "Garlic / Onions"
+          }
+        },
+        "column_b6hAXq": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/gum.png",
+            "hex_text": "Gum / Xylitol"
+          }
+        },
+        "column_9YEkKk": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/bones.png",
+            "hex_text": "Cooked Bones"
+          }
+        },
+        "column_mahzMU": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/dough.png",
+            "hex_text": "Dough / Yeast"
+          }
+        },
+        "column_GGUng8": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/coffee.png",
+            "hex_text": "Coffee / Tea (Caffeine)"
+          }
+        },
+        "column_eWKVtN": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/grapes.png",
+            "hex_text": "Grapes / Raisins"
+          }
+        },
+        "column_4KAPmE": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/avocado.png",
+            "hex_text": "Avocado"
+          }
+        },
+        "column_4XgYXR": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/chocolate.png",
+            "hex_text": "Chocolate"
+          }
+        },
+        "column_HVLyHR": {
+          "type": "column",
+          "settings": {
+            "hex_image": "shopify://shop_images/mushroooms.png",
+            "hex_text": "Mushrooms"
+          }
+        }
+      },
+      "block_order": [
+        "column_THYFLa",
+        "column_PmDyCy",
+        "column_b6hAXq",
+        "column_9YEkKk",
+        "column_mahzMU",
+        "column_GGUng8",
+        "column_eWKVtN",
+        "column_4KAPmE",
+        "column_4XgYXR",
+        "column_HVLyHR"
+      ],
+      "name": "Hex Grid",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "What NOT to Put on a Lick Mat",
+        "heading_color": "#493293",
+        "content": "Always check to make sure foods are safe for your pet. Here's some foods that are NOT recommended.",
+        "hex_background_color": "#ffc28e",
+        "hex_title_color": "#493293"
+      }
     }
   },
   "order": [
     "main",
     "title_with_content_tF6XJt",
-    "product_listing_hexes_CiMHrJ"
+    "product_listing_hexes_CiMHrJ",
+    "hex_grid_Gwyjhc",
+    "hex_grid_HiF6AK"
   ]
 }
