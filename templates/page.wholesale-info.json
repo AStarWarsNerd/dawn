@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_idVrqK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FmB8wz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking For Wholesale?",
+            "heading_size": "h1"
+          }
+        },
+        "text_UUtRBa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Wholesale products are only available to approved partners.</p><p></p><p>If  you're interested in becoming a partner let us know!</p>"
+          }
+        },
+        "button_RXmkEt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FmB8wz",
+        "text_UUtRBa",
+        "button_RXmkEt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "product_listing_hexes_CHrhqn": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ffc28e",
+        "title": "Our Featured Lick Mats",
+        "heading_color": "#493293",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "featured-lick-mats",
+        "hex_background_color": "#ebcaed",
+        "hex_title_color": "#E57D25",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_idVrqK",
+    "product_listing_hexes_CHrhqn"
+  ]
+}
