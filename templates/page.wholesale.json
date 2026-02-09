@@ -55,7 +55,7 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "background_color": "#d3e9ff",
-        "title": "Title",
+        "title": "Lick Mats",
         "heading_color": "#E57D25",
         "content": "",
         "button_text": "",
@@ -63,15 +63,42 @@
         "collection": "lick-mats-wholesale",
         "hex_background_color": "#ebcaed",
         "hex_title_color": "#E57D25",
-        "hex_text_color": "#493293",
+        "hex_text_color": "#E57D25",
+        "hex_button_color": "#E57D25",
+        "hex_button_hover_color": "#0D528E"
+      }
+    },
+    "product_listing_hexes_pCPYKE": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Slow Feeder Bowls",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "bowls-wholesale",
+        "hex_background_color": "#DC487F",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
       }
+    },
+    "wholesale_redirect_bFeKHf": {
+      "type": "wholesale-redirect",
+      "name": "Wholesale Redirect",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "rich_text_x34kwN",
-    "product_listing_hexes_tEBENf"
+    "product_listing_hexes_tEBENf",
+    "product_listing_hexes_pCPYKE",
+    "wholesale_redirect_bFeKHf"
   ]
 }

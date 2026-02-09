@@ -1,0 +1,20 @@
+{% unless request.design_mode %}
+  {% unless customer and customer.tags contains 'Wholesale' %}
+    <script>
+      window.location.href = '/pages/wholesale-info';
+    </script>
+  {% endunless %}
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Wholesale Redirect",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Wholesale Redirect"
+    }
+  ]
+}
+{% endschema %}
