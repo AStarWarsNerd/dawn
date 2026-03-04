@@ -1540,3 +1540,16 @@ a.product__text {
     border: none;
   }
 }
+
+.product-customizable-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-customizable-field #custom_text {
+  height: 50px;
+  font-size: 20px;
+  padding: 0 15px;
+  border-radius: 10px;
+}
