@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "title_with_content_tF6XJt": {
+      "type": "title-with-content",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "Accessories",
+        "heading_color": "#493293",
+        "content": "Shop our premium collection of pet accessories designed to keep your furry friends happy, healthy, and stylish. From durable feeding essentials and enrichment toys to training tools. Our high-quality products are made with both pets and owners in mind. Discover innovative, easy-to-clean, and pet-safe accessories perfect for everyday use.",
+        "content_color": "#493293"
+      }
+    },
+    "product_listing_hexes_CiMHrJ": {
+      "type": "product-listing-hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "background_color": "#bfb4e1",
+        "title": "",
+        "heading_color": "#E57D25",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "accessories",
+        "hex_background_color": "#ffc28e",
+        "hex_title_color": "#493293",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#493293",
+        "hex_button_hover_color": "#E57D25"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "title_with_content_tF6XJt",
+    "product_listing_hexes_CiMHrJ"
+  ]
+}
