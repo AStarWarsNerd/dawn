@@ -105,6 +105,26 @@
         "hex_button_hover_color": "#E57D25"
       }
     },
+    "product_listing_hexes_JmM4nV": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ffc28e",
+        "title": "Featured NFC Smart Tags",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "Shop All Smart Tags",
+        "button_link": "shopify://pages/smart-tags",
+        "collection": "featured-smart-tags-1",
+        "hex_background_color": "#d3e9ff",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
     "product_listing_hexes_KWqxLH": {
       "type": "product-listing-hexes",
       "settings": {
@@ -143,66 +163,13 @@
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
       }
-    },
-    "multicolumn_zWWqWK": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_mztV4b": {
-          "type": "column",
-          "settings": {
-            "title": "What are the Scouts?",
-            "text": "<p>The Pup Scout Pack is a fun and engaging dog training and social program, designed to strengthen the bond between dogs and their owners.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_TTKUPw": {
-          "type": "column",
-          "settings": {
-            "title": "How to Join",
-            "text": "<p>Getting started is very simple, just visit our Pup Scout Page to get an overview and start earning badges with your pup! </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_7e3jyT": {
-          "type": "column",
-          "settings": {
-            "title": "Earn Mutt Merit",
-            "text": "<p>The more badges you collect the more Mutt Merit you will get. Advance through the ranks starting at Lil Sprout and become a Legend Pup!</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_mztV4b",
-        "column_TTKUPw",
-        "column_7e3jyT"
-      ],
-      "settings": {
-        "title": "Join the Pup Scout Pack!",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Learn More",
-        "button_link": "shopify://pages/pup-scout-pack",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-5",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "slideshow_UYb6d7",
     "product_listing_hexes_67M3F4",
+    "product_listing_hexes_JmM4nV",
     "product_listing_hexes_KWqxLH",
-    "product_listing_hexes_NdyNwp",
-    "multicolumn_zWWqWK"
+    "product_listing_hexes_NdyNwp"
   ]
 }

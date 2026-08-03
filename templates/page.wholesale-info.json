@@ -30,7 +30,13 @@
         "text_UUtRBa": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Wholesale products are only available to approved partners.</p><p></p><p>If  you're interested in becoming a partner let us know!</p>"
+            "text": "<p>Our Wholesale products are only available to approved partners.</p><p></p><p>If  you're interested in becoming a partner let us know!</p><p></p><p>Check out our <a href=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\">2026 Wholesale Catalog Here</a></p>"
+          }
+        },
+        "text_CrJTUN": {
+          "type": "text",
+          "settings": {
+            "text": ""
           }
         },
         "button_RXmkEt": {
@@ -48,6 +54,7 @@
       "block_order": [
         "heading_FmB8wz",
         "text_UUtRBa",
+        "text_CrJTUN",
         "button_RXmkEt"
       ],
       "name": "t:sections.rich-text.presets.name",
