@@ -36,10 +36,18 @@
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
+    data-url="{{ routes.product_recommendations_url }}?limit=10"
     data-section-id="{{ section.id }}"
     data-product-id="{{ product.id }}"
   >
+    {% assign shown = 0 %}
+    {% assign max_to_show = 3 %}
+
+    {% assign current_is_wholesale = false %}
+    {% if product.tags contains 'Wholesale' %}
+      {% assign current_is_wholesale = true %}
+    {% endif %}
+
     {% if recommendations.performed and recommendations.products_count > 0 %}
       <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
@@ -47,49 +55,49 @@
 
       <div class="product-listing-hexes">
         <div class="product-hex-row">
-          {% for product in recommendations.products %}
-            <div class="product-hex-outer">
-              <div class="product-hex title-hex">
-                <div class="product-hex-inner">
-                  <a href="{{ product.url}}">
-                    <img
-                      src="{{ product.featured_image | img_url: 'medium' }}"
-                      alt="{{ product.title }}"
-                      width="200"
-                      height="200"
-                    >
-                  </a>
+          {% for rec_product in recommendations.products %}
+            {% if shown >= max_to_show %}
+              {% break %}
+            {% endif %}
 
-                  <a href="{{ product.url}}">
-                    <h3>{{ product.title }}</h3>
-                  </a>
+            {% assign exclude = false %}
 
-                  <p class="price">{{ product.price | money }}</p>
+            {% unless current_is_wholesale %}
+              {% if rec_product.tags contains 'Wholesale' %}
+                {% assign exclude = true %}
+              {% endif %}
+            {% endunless %}
 
-                  <form method="post" action="/cart/add">
-                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                    <button type="submit" class="hex-button">Add to Cart</button>
-                  </form>
+            {% unless exclude %}
+              <div class="product-hex-outer">
+                <div class="product-hex title-hex">
+                  <div class="product-hex-inner">
+                    <a href="{{ rec_product.url}}">
+                      <img
+                        src="{{ rec_product.featured_image | img_url: 'medium' }}"
+                        alt="{{ rec_product.title }}"
+                        width="200"
+                        height="200"
+                      >
+                    </a>
+
+                    <a href="{{ rec_product.url}}">
+                      <h3>{{ rec_product.title }}</h3>
+                    </a>
+
+                    <p class="price">{{ rec_product.price | money }}</p>
+
+                    <form method="post" action="/cart/add">
+                      <input type="hidden" name="id" value="{{ rec_product.variants.first.id }}">
+                      <button type="submit" class="hex-button">Add to Cart</button>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {% assign remainder = forloop.index | modulo: 3 %}
-            {% if forloop.index < section.settings.collection.products.size %}
-              {% if remainder == 0 %}
-                </div>
-                <div class="product-hex-row">
-              {% endif %}
-            {% endif %}
+              {% assign shown = shown | plus: 1 %}
+            {% endunless %}
           {% endfor %}
-
-          {% if remainder == 1 %}
-            <div></div>
-            <div></div>
-          {% endif %}
-          {% if remainder == 2 %}
-            <div></div>
-          {% endif %}
         </div>
       </div>
     {% endif %}
