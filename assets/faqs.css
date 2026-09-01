@@ -1,0 +1,54 @@
+.faq-container>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-container h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq summary {
+    cursor: pointer;
+    padding: 10px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clip-path: polygon(20px 0,
+            calc(100% - 20px) 0,
+            100% 50%,
+            calc(100% - 20px) 100%,
+            20px 100%,
+            0 50%);
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5v14M5 12h14' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5v14M5 12h14' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.faq details[open] summary::after {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.faq .answer {
+    padding: 10px;
+    margin: 0 20px;
+}

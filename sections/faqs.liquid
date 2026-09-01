@@ -1,0 +1,423 @@
+{{ 'faqs.css' | asset_url | stylesheet_tag }}
+
+{%- assign id = '#shopify-section-' | append: section.id -%}
+
+<style>
+  {{ id }} .faq-container {
+      background-color: {{ section.settings.background_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  {{ id }} .faq-container h2,
+  {{ id }} .faq-container .content {
+    color: {{ section.settings.heading_color }};
+  }
+  {{ id }} .faq summary {
+    background-color: {{ section.settings.question_background_color }};
+    color: {{ section.settings.question_color }};
+  }
+  {{ id }} .faq .answer {
+    background-color: {{ section.settings.answer_background_color }};
+    color: {{ section.settings.answer_color }};
+    border-top: 1px solid {{ section.settings.answer_color }};
+  }
+</style>
+
+<div class="faq-container">
+  <div class="page-width page-width-desktop">
+    {% if section.settings.title != null %}
+      <div class="hex-title-row">
+        <h2>{{ section.settings.title }}</h2>
+        {% if section.settings.content != null %}
+          <div class="content">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="faqs">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          <div class="faq">
+            <details>
+              <summary>
+                {{ block.settings.question_text -}}
+                <span></span>
+              </summary>
+              <p class="answer">{{ block.settings.answer_text }}</p>
+            </details>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ's",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#d3e9ff"
+    },
+
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#493293"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+
+    {
+      "type": "header",
+      "content": "Question Settings"
+    },
+    {
+      "type": "select",
+      "id": "question_background_color",
+      "label": "Question Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#bfb4e1"
+    },
+    {
+      "type": "select",
+      "id": "question_color",
+      "label": "Question Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#493293"
+    },
+    {
+      "type": "select",
+      "id": "answer_background_color",
+      "label": "Answer Background Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#ebcaed"
+    },
+    {
+      "type": "select",
+      "id": "answer_color",
+      "label": "Answer Color",
+      "options": [
+        {
+          "value": "#d3e9ff",
+          "label": "Light Blue"
+        },
+        {
+          "value": "#7ba8cf",
+          "label": "Medium Blue"
+        },
+        {
+          "value": "#0D528E",
+          "label": "Blue"
+        },
+        {
+          "value": "#ebcaed",
+          "label": "Light Pink"
+        },
+        {
+          "value": "#DC487F",
+          "label": "Pink"
+        },
+        {
+          "value": "#493293",
+          "label": "Purple"
+        },
+        {
+          "value": "#bfb4e1",
+          "label": "Light Purple"
+        },
+        {
+          "value": "#E57D25",
+          "label": "Orange"
+        },
+        {
+          "value": "#ffc28e",
+          "label": "Light Orange"
+        },
+        {
+          "value": "#ffffff",
+          "label": "White"
+        }
+      ],
+      "default": "#DC487F"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Questions",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question_text",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer_text",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ's"
+    }
+  ]
+}
+{% endschema %}
