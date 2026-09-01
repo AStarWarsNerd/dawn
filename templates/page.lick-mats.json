@@ -243,6 +243,82 @@
         "hex_background_color": "#ffc28e",
         "hex_title_color": "#493293"
       }
+    },
+    "faqs_t844Kn": {
+      "type": "faqs",
+      "blocks": {
+        "column_wjLzxN": {
+          "type": "column",
+          "settings": {
+            "question_text": "What are the benefits of using a lick mat?",
+            "answer_text": "Lick mats provide mental enrichment, help promote calm behavior, slow down treat consumption, and keep pets entertained. They’re also great for distractions during baths, grooming, crate training, or stressful situations."
+          }
+        },
+        "column_VXarkY": {
+          "type": "column",
+          "settings": {
+            "question_text": "Are lick mats good for anxious dogs?",
+            "answer_text": "Yes! Lick mats can help soothe and distract anxious dogs by encouraging repetitive licking, which can promote relaxation. They’re especially useful during stressful situations like thunderstorms, grooming, travel, or being left alone."
+          }
+        },
+        "column_cakekY": {
+          "type": "column",
+          "settings": {
+            "question_text": "How long should my dog use a lick mat?",
+            "answer_text": "Most dogs can use a lick mat for 10–30 minutes at a time. Start with shorter sessions and supervise your dog to make sure they’re using it safely."
+          }
+        },
+        "column_Hcqq63": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can cats use lick mats?",
+            "answer_text": "Yes! Cats can use lick mats for mental stimulation, enrichment, and slower treat or meal consumption. Use cat-safe foods and always supervise your cat during use."
+          }
+        },
+        "column_9zyAnM": {
+          "type": "column",
+          "settings": {
+            "question_text": "How do I clean a silicone lick mat?",
+            "answer_text": "All of our Lick Mats are dishwasher safe, or simply clean with soap and warm water."
+          }
+        },
+        "column_zC6Deg": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can I freeze a lick mat?",
+            "answer_text": "Yes! All of our Lick Mats are freezer safe, it's a great way to extend the time it takes your pet to have its treat."
+          }
+        },
+        "column_NcMKLf": {
+          "type": "column",
+          "settings": {
+            "question_text": "Are silicone lick mats safe for dogs?",
+            "answer_text": "Yes, all of our Lick Mats are non-toxic and BPA free. They still shouldn’t be consumed so supervise your pet while using."
+          }
+        }
+      },
+      "block_order": [
+        "column_wjLzxN",
+        "column_VXarkY",
+        "column_cakekY",
+        "column_Hcqq63",
+        "column_9zyAnM",
+        "column_zC6Deg",
+        "column_NcMKLf"
+      ],
+      "name": "FAQ's",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#d3e9ff",
+        "title": "Lick Mat FAQ's",
+        "heading_color": "#493293",
+        "content": "",
+        "question_background_color": "#bfb4e1",
+        "question_color": "#493293",
+        "answer_background_color": "#ebcaed",
+        "answer_color": "#DC487F"
+      }
     }
   },
   "order": [
@@ -250,6 +326,7 @@
     "title_with_content_tF6XJt",
     "product_listing_hexes_CiMHrJ",
     "hex_grid_Gwyjhc",
-    "hex_grid_HiF6AK"
+    "hex_grid_HiF6AK",
+    "faqs_t844Kn"
   ]
 }

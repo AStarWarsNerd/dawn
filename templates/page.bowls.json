@@ -67,12 +67,97 @@
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
       }
+    },
+    "faqs_TjC3G7": {
+      "type": "faqs",
+      "blocks": {
+        "column_PLchg8": {
+          "type": "column",
+          "settings": {
+            "question_text": "Why should dogs use a slow feeder bowl?",
+            "answer_text": "Slow feeder bowls encourage dogs to eat more slowly, helping reduce gulping and making mealtime more engaging. They can also provide mental stimulation and encourage healthier eating habits."
+          }
+        },
+        "column_wnQViJ": {
+          "type": "column",
+          "settings": {
+            "question_text": "Are slow feeder bowls good for puppies?",
+            "answer_text": "Yes! Slow feeder bowls can help puppies eat more slowly, reduce gulping, and make mealtime more engaging. They’re especially helpful for puppies that tend to eat too quickly."
+          }
+        },
+        "column_hxUBCE": {
+          "type": "column",
+          "settings": {
+            "question_text": "What is the difference between a slow feeder bowl and a regular bowl?",
+            "answer_text": "Our Slow Feeder bowls are designed with raised maze-like sections that make pets work for their food, slowing down fast eaters. Regular bowls allow food to be eaten much more quickly."
+          }
+        },
+        "column_feM4UT": {
+          "type": "column",
+          "settings": {
+            "question_text": "Are silicone slow feeder bowls safe?",
+            "answer_text": "Yes, all of our silicone Slow Feeder bowls are non-toxic and BPA free. They still shouldn’t be consumed so supervise your pet while using."
+          }
+        },
+        "column_tcByLc": {
+          "type": "column",
+          "settings": {
+            "question_text": "Are silicone slow feeder bowls dishwasher safe?",
+            "answer_text": "Yes! All of our silicone Slow Feeder bowls are dishwasher safe."
+          }
+        },
+        "column_EmgFbw": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can I put a silicone slow feeder bowl in the freezer?",
+            "answer_text": "Yes! All of our Slow Feeder bowls are freezer safe, it's a great way to extend your pets meal time."
+          }
+        },
+        "column_PFg4Fc": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can silicone slow feeder bowls go in the microwave?",
+            "answer_text": "Yes! All of our silicone Slow Feeder bowls are microwave safe."
+          }
+        },
+        "column_8g8jRn": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can cats use slow feeder bowls?",
+            "answer_text": "Yes! Slow feeder bowls can help cats eat more slowly, reduce gulping, and provide extra mental stimulation during mealtime. Choose a design that’s comfortable and easy for your cat to use."
+          }
+        }
+      },
+      "block_order": [
+        "column_PLchg8",
+        "column_wnQViJ",
+        "column_hxUBCE",
+        "column_feM4UT",
+        "column_tcByLc",
+        "column_EmgFbw",
+        "column_PFg4Fc",
+        "column_8g8jRn"
+      ],
+      "name": "FAQ's",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#d3e9ff",
+        "title": "Slow Feeder Bowl FAQ's",
+        "heading_color": "#493293",
+        "content": "",
+        "question_background_color": "#bfb4e1",
+        "question_color": "#493293",
+        "answer_background_color": "#ebcaed",
+        "answer_color": "#DC487F"
+      }
     }
   },
   "order": [
     "main",
     "title_with_content_kqF8QR",
     "product_listing_hexes_Fjik9i",
-    "product_listing_hexes_UaBhcy"
+    "product_listing_hexes_UaBhcy",
+    "faqs_TjC3G7"
   ]
 }

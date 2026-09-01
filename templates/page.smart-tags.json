@@ -38,22 +38,99 @@
         "padding_bottom": 20,
         "background_color": "#d3e9ff",
         "title": "",
-        "heading_color": "#E57D25",
+        "heading_color": "#0D528E",
         "content": "",
         "button_text": "",
         "button_link": "",
         "collection": "smart-tags",
         "hex_background_color": "#ebcaed",
-        "hex_title_color": "#E57D25",
-        "hex_text_color": "#493293",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
         "hex_button_color": "#0D528E",
         "hex_button_hover_color": "#E57D25"
+      }
+    },
+    "faqs_agdYtY": {
+      "type": "faqs",
+      "blocks": {
+        "column_QnPFhJ": {
+          "type": "column",
+          "settings": {
+            "question_text": "What is an NFC pet smart tag?",
+            "answer_text": "An NFC pet smart tag is a digital ID tag that lets someone tap their smartphone against your pet’s tag to quickly access their contact and pet information. It’s a convenient way to help reunite lost pets with their owners."
+          }
+        },
+        "column_B8CMMQ": {
+          "type": "column",
+          "settings": {
+            "question_text": "How do I set up my NFC pet tag?",
+            "answer_text": "Our Smart Tags come with instructions on how to download an app to set up your information."
+          }
+        },
+        "column_M6Qjte": {
+          "type": "column",
+          "settings": {
+            "question_text": "How does someone scan my pet's NFC tag?",
+            "answer_text": "Anyone can simply tap their smartphone to the Smart Tag to view your pet’s information."
+          }
+        },
+        "column_QRYcUL": {
+          "type": "column",
+          "settings": {
+            "question_text": "Does the person who finds my pet need an app?",
+            "answer_text": "No! Any smart phone can simply tap the Smart Tag."
+          }
+        },
+        "column_TzJwUF": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can someone scan the tag with an iPhone?",
+            "answer_text": "Yes!"
+          }
+        },
+        "column_3ez4hp": {
+          "type": "column",
+          "settings": {
+            "question_text": "Can someone scan the tag with an Android phone?",
+            "answer_text": "Yes!"
+          }
+        },
+        "column_RLzrXL": {
+          "type": "column",
+          "settings": {
+            "question_text": "Do NFC tags need batteries?",
+            "answer_text": "No!"
+          }
+        }
+      },
+      "block_order": [
+        "column_QnPFhJ",
+        "column_B8CMMQ",
+        "column_M6Qjte",
+        "column_QRYcUL",
+        "column_TzJwUF",
+        "column_3ez4hp",
+        "column_RLzrXL"
+      ],
+      "name": "FAQ's",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ebcaed",
+        "title": "Smart Tag FAQ's",
+        "heading_color": "#493293",
+        "content": "",
+        "question_background_color": "#bfb4e1",
+        "question_color": "#493293",
+        "answer_background_color": "#d3e9ff",
+        "answer_color": "#0D528E"
       }
     }
   },
   "order": [
     "main",
     "title_with_content_UDzCJy",
-    "product_listing_hexes_dd8WUF"
+    "product_listing_hexes_dd8WUF",
+    "faqs_agdYtY"
   ]
 }
