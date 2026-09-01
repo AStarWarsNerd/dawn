@@ -68,6 +68,26 @@
         "hex_button_hover_color": "#0D528E"
       }
     },
+    "product_listing_hexes_cXL9Ch": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#ebcaed",
+        "title": "Flex Feeders",
+        "heading_color": "#493293",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "collection": "flex-feeder-wholesale",
+        "hex_background_color": "#bfb4e1",
+        "hex_title_color": "#493293",
+        "hex_text_color": "#493293",
+        "hex_button_color": "#493293",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
     "product_listing_hexes_pCPYKE": {
       "type": "product-listing-hexes",
       "name": "Product Listing Hexes",
@@ -75,12 +95,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "background_color": "#bfb4e1",
-        "title": "Slow Feeder Bowls",
+        "title": "Rigid Bowls",
         "heading_color": "#0D528E",
         "content": "",
         "button_text": "",
         "button_link": "",
-        "collection": "bowls-wholesale",
+        "collection": "rigid-bowl-wholesale",
         "hex_background_color": "#DC487F",
         "hex_title_color": "#0D528E",
         "hex_text_color": "#0D528E",
@@ -118,6 +138,7 @@
     "main",
     "rich_text_x34kwN",
     "product_listing_hexes_tEBENf",
+    "product_listing_hexes_cXL9Ch",
     "product_listing_hexes_pCPYKE",
     "product_listing_hexes_3eCamT",
     "wholesale_redirect_bFeKHf"

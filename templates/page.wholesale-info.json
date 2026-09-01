@@ -30,7 +30,7 @@
         "text_UUtRBa": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Wholesale products are only available to approved partners.</p><p></p><p>If  you're interested in becoming a partner let us know!</p><p></p><p>Check out our <a href=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\">2026 Wholesale Catalog Here</a></p>"
+            "text": "<p>Our Wholesale products are only available to approved partners. <br/>Fill out the form below to join the pack!</p><p></p><p>Check out our <a href=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0719/6888/2903/files/PupSnackPack_Wholesale_Catalog_2026.pdf\">2026 Wholesale Catalog Here</a></p>"
           }
         },
         "text_CrJTUN": {
@@ -67,6 +67,34 @@
         "padding_bottom": 52
       }
     },
+    "1786564408557d0f58": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_R3XXBc": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1109998",
+            "text_color": "#0D528E",
+            "button_background_color": "#0D528E",
+            "button_label_color": "#ffffff",
+            "links_color": "#0D528E",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 30,
+            "padding_bottom": 30,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_R3XXBc"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product_listing_hexes_CHrhqn": {
       "type": "product-listing-hexes",
       "name": "Product Listing Hexes",
@@ -91,6 +119,7 @@
   "order": [
     "main",
     "rich_text_idVrqK",
+    "1786564408557d0f58",
     "product_listing_hexes_CHrhqn"
   ]
 }

@@ -34,9 +34,53 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_Htfnjc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UmTcMr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Earn Commissions Through Goaffpro",
+            "heading_size": "h1"
+          }
+        },
+        "text_WnHXQz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Earn up to 10% commission for every successful referral!<br/></p>"
+          }
+        },
+        "button_pBwRUY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More!",
+            "button_link": "https://pupsnackpack.goaffpro.com/",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UmTcMr",
+        "text_WnHXQz",
+        "button_pBwRUY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "collabs"
+    "collabs",
+    "rich_text_Htfnjc"
   ]
 }

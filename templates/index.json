@@ -86,6 +86,26 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "product_listing_hexes_NdyNwp": {
+      "type": "product-listing-hexes",
+      "name": "Product Listing Hexes",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "background_color": "#bfb4e1",
+        "title": "New Slow Feeder Bowls",
+        "heading_color": "#0D528E",
+        "content": "",
+        "button_text": "Shop All Bowls",
+        "button_link": "shopify://pages/bowls",
+        "collection": "featured-bowls",
+        "hex_background_color": "#DC487F",
+        "hex_title_color": "#0D528E",
+        "hex_text_color": "#0D528E",
+        "hex_button_color": "#0D528E",
+        "hex_button_hover_color": "#E57D25"
+      }
+    },
     "product_listing_hexes_67M3F4": {
       "type": "product-listing-hexes",
       "settings": {
@@ -143,33 +163,13 @@
         "hex_button_color": "#E57D25",
         "hex_button_hover_color": "#0D528E"
       }
-    },
-    "product_listing_hexes_NdyNwp": {
-      "type": "product-listing-hexes",
-      "name": "Product Listing Hexes",
-      "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "background_color": "#bfb4e1",
-        "title": "New Slow Feeder Bowls",
-        "heading_color": "#0D528E",
-        "content": "",
-        "button_text": "Shop All Bowls",
-        "button_link": "shopify://pages/bowls",
-        "collection": "featured-bowls",
-        "hex_background_color": "#DC487F",
-        "hex_title_color": "#0D528E",
-        "hex_text_color": "#0D528E",
-        "hex_button_color": "#0D528E",
-        "hex_button_hover_color": "#E57D25"
-      }
     }
   },
   "order": [
     "slideshow_UYb6d7",
-    "product_listing_hexes_67M3F4",
-    "product_listing_hexes_JmM4nV",
+    "product_listing_hexes_NdyNwp",
     "product_listing_hexes_KWqxLH",
-    "product_listing_hexes_NdyNwp"
+    "product_listing_hexes_JmM4nV",
+    "product_listing_hexes_67M3F4"
   ]
 }
